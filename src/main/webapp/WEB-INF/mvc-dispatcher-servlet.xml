@@ -16,8 +16,8 @@
 
 	<!-- Handles HTTP GET requests by efficiently serving up static resources 
 		in the corresponding directory -->
-	<resources mapping="/js/**" location="/js/" />
-	<resources mapping="/css/**" location="/css/" />
+	<!-- <mvc:resources mapping="/js/**" location="/js/" /> -->
+	 <!-- <mvc:resources mapping="/css/**" location="/src/main/webapp/resources/css/" /> --> 
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
