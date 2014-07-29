@@ -12,4 +12,4 @@ public class SampleController {
         System.out.println("From the controller");  
         return new ModelAndView("hello", "message", message);  
     }  
-}  
+}   
