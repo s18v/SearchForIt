@@ -8,13 +8,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Search for it!</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript">
+	function submitFunct() {
+		var searchQuery = document.getElementById("searchQuery").value;
+		alert(searchQuery);
+	}
+</script>
 </head>
 <body>
-	<h1>${displayText}</h1>
+	<h1>${testObj.testString}</h1>
 	<br>
-	<input type="text" class="form-control"
-		placeholder="Search for something..">
+	<form>
+		<input type="text" class="form-control"
+			placeholder="Search for something.." id="searchQuery">
+	</form>
 	<br>
-	<button type="button" class="btn btn-success" disabled="disabled">Submit</button>
+	<button type="button" class="btn btn-success" onclick="submitFunct()">Submit</button>
 </body>
 </html>
