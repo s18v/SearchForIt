@@ -16,7 +16,9 @@
 </script>
 </head>
 <body>
-	<h1>${testObj.testString}</h1>
+
+	<%-- <h1>${testObj.testString}</h1> --%>
+	<h1>${displayText}</h1>
 	<br>
 	<form>
 		<input type="text" class="form-control"
