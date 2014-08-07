@@ -10,8 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SearchController {
-	String displayText = "Search the inventory for anything you like!";
-
+	String displayText = "Search";
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public ModelAndView handleSearch() {
 
@@ -25,6 +24,17 @@ public class SearchController {
 		modelAndView.addObject("displayText", displayText);
 
 		return modelAndView;
+	}
+
+	@RequestMapping(value = "/searchquery", method = { RequestMethod.GET,
+			RequestMethod.POST })
+	public Map<String,Object> handleSearchQuery() {
+		String result = "You have this as a result of the search query";
+
+		Map<String,Object> map = new HashMap<String, Object>();
+		
+		map.put("result", result);
+		return map;
 	}
 
 	// @RequestMapping(value = "/search", method = RequestMethod.GET)

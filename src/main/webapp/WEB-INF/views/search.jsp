@@ -8,23 +8,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Search for it!</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript">
-	function submitFunct() {
-		var searchQuery = document.getElementById("searchQuery").value;
-		alert(searchQuery);
-	}
-</script>
+<style>
+h1 {
+	font-family: arial;
+}
+</style>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
-
 	<%-- <h1>${testObj.testString}</h1> --%>
 	<h1>${displayText}</h1>
-	<br>
-	<form>
-		<input type="text" class="form-control"
-			placeholder="Search for something.." id="searchQuery">
-	</form>
-	<br>
-	<button type="button" class="btn btn-success" onclick="submitFunct()">Submit</button>
+	<div id="searcharea">
+		<form>
+			<!-- add this in the input tag - class="form-control" -->
+			<input type="text" placeholder="Search for something.."
+				id="searchquery">
+		</form>
+		<br>
+		<button type="button" class="btn btn-success" id="btnsubmit">Submit</button>
+	</div>
+
+	<div id="searchresults">
+		<h2 id="h2"></h2>
+	</div>
+	<!-- <script src="js/script.js" type="text/javascript"></script> -->
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#btnsubmit").click(function() {
+				$("h1").hide();
+			});
+		});
+	</script>
 </body>
 </html>
