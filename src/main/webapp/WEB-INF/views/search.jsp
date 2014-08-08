@@ -30,16 +30,37 @@ h1 {
 	</div>
 
 	<div id="searchresults">
-		<h2 id="h2"></h2>
+		<p id="para">result here</p>
 	</div>
 	<!-- <script src="js/script.js" type="text/javascript"></script> -->
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+
+			//var params = {'searchquery' : searchquery};
+			//params: params
+			alert("hey");
 			$("#btnsubmit").click(function() {
-				$("h1").hide();
+				var searchquery = $("#searchquery").val().trim();
+				$.ajax({
+					url : "searchqueryresult",
+					dataType : 'string',
+					data : {
+						searchquery : searchquery
+					},
+					type : "POST",
+					success : function(result) {
+						alert(result);
+						$("#para").html(result);
+					}
+				})/* .done(function(result) {
+							alert(result);
+							$("#para").html(result);
+							}); */
+				/* alert(searchquery); */
 			});
 		});
 	</script>
+
 </body>
 </html>

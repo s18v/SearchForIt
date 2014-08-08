@@ -17,20 +17,23 @@ public class DbUtil {
 
 		DBCollection catalog = books.getCollection("catalog");
 
-		DBObject book = new BasicDBObject();
+//		DBObject book = new BasicDBObject();
 
-		book.put("author", "Gambardella, Matthew");
-		book.put("title", "XML Developer's Guide");
-		book.put("genre", "Computer");
-		book.put("price", "44.95");
-		book.put("publish_date", "2000-10-01");
-		book.put("description",
-				"An in-depth look at creating applications with XML.");
-		
-		catalog.insert(book);
+//		book.put("author", "Gambardella, Matthew");
+//		book.put("title", "XML Developer's Guide");
+//		book.put("genre", "Computer");
+//		book.put("price", "44.95");
+//		book.put("publish_date", "2000-10-01");
+//		book.put("description",
+//				"An in-depth look at creating applications with XML.");
+//		
+//		catalog.insert(book);
 		
 		Set<String> catalogTables = books.getCollectionNames();
 
+		
+		System.out.println(books.getCollection("catalog").getCount());
+		
 		for (String coll : catalogTables) {
 			System.out.println(coll);
 		}
