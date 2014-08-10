@@ -32,14 +32,12 @@ h1 {
 	<div id="searchresults">
 		<p id="para">result here</p>
 	</div>
-	<!-- <script src="js/script.js" type="text/javascript"></script> -->
+
+	<script src="/resources/js/script.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-
-			//var params = {'searchquery' : searchquery};
-			//params: params
-			alert("hey");
+			var temp;
 			$("#btnsubmit").click(function() {
 				var searchquery = $("#searchquery").val().trim();
 				$.ajax({
@@ -50,15 +48,16 @@ h1 {
 					},
 					type : "POST",
 					success : function(result) {
-						alert(result);
+						temp = result;
 						$("#para").html(result);
 					}
 				})/* .done(function(result) {
-							alert(result);
-							$("#para").html(result);
-							}); */
+											alert(result);
+											$("#para").html(result);
+											}); */
 				/* alert(searchquery); */
 			});
+			/* alert(temp); */
 		});
 	</script>
 
