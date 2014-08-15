@@ -59,17 +59,3 @@ public class SearchController {
 
 }
 
-// public static class TestClass {
-// public String testString;
-//
-// TestClass(String testString){
-// this.testString =testString;
-// }
-// public String getTestString() {
-// return testString;
-// }
-// public void setTestString(String testString) {
-// this.testString = testString;
-// }
-//
-// }
